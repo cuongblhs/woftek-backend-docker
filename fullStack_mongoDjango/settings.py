@@ -1,6 +1,7 @@
 
 
 from pathlib import Path
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 MEDIA_URL = '/Photos/'
@@ -79,10 +80,10 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydjangotest',
-        'USER': 'analytical',
-        'PASSWORD': 'nahid123@#',
-        'HOST': '35.163.34.171',
+        'NAME': os.getenv("DB_DATABASE"),
+        'USER': os.getenv("DB_USER")',
+        'PASSWORD': os.getenv("DB_PASSWORD"),
+        'HOST': os.getenv("DB_HOST"),
     }
 }
 
