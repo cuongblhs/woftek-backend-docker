@@ -3,3 +3,4 @@ djangorestframework==3.14.0
 PyMySQL==1.0.2
 django-cors-headers
 gunicorn
+cryptography
